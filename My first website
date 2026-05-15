@@ -1,0 +1,72 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Random Fun Facts</title>
+
+  <style>
+    body{
+      font-family: Arial;
+      background:#f0f4ff;
+      text-align:center;
+      padding:40px;
+    }
+
+    .box{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      max-width:500px;
+      margin:auto;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    button{
+      padding:10px 20px;
+      background:#4a6cf7;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    #fact{
+      margin:20px 0;
+      font-size:20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>🎉 Random Fun Facts</h1>
+
+  <p id="fact">
+    Click the button to see a fun fact!
+  </p>
+
+  <button onclick="showFact()">
+    Show Fun Fact
+  </button>
+</div>
+
+<script>
+const facts = [
+  "Honey never spoils.",
+  "Bananas are berries.",
+  "Octopuses have three hearts.",
+  "The Eiffel Tower grows taller in summer.",
+  "A group of flamingos is called a flamboyance."
+];
+
+function showFact(){
+  const randomIndex =
+    Math.floor(Math.random() * facts.length);
+
+  document.getElementById("fact").innerText =
+    facts[randomIndex];
+}
+</script>
+
+</body>
+</html>
